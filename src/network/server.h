@@ -6,6 +6,10 @@
 #include <arpa/inet.h>
 
 #include <thread>
+#include <list>
+
+#include "clientManager.h"
+#include "iClient.h"
 
 
 class CamServer
@@ -15,6 +19,9 @@ class CamServer
         int socket_fd;
         struct sockaddr_in address;
         std::thread listeningThread;
+
+        std::list<IClient*> clientsList;
+
 
     public:
         //Constructor
