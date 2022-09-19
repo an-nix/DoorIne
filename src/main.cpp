@@ -3,6 +3,9 @@
 #include <chrono>
 #include <thread>
 
+#include <opencv2/opencv.hpp>
+
+
 #include "network/client.h"
 
 int main(int, char**) {
