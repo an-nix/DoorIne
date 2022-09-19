@@ -11,7 +11,7 @@ find_package(Threads REQUIRED)
 
 add_executable(DoorIn 
 src/main.cpp
-src/network/clientManager.cpp
+src/network/client.cpp
 src/network/server.cpp)
 
 target_link_libraries(DoorIn Threads::Threads)

@@ -1,15 +1,16 @@
-#ifndef __SERVER_HEADER__
-#define __SERVER_HEADER_
+#ifndef HEADER_SERVER__
+#define HEADER_SERVER__
 
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <unistd.h>
 
 #include <thread>
 #include <list>
 
-#include "clientManager.h"
-#include "iClient.h"
+#include "client.h"
+
 
 
 class CamServer
@@ -20,8 +21,7 @@ class CamServer
         struct sockaddr_in address;
         std::thread listeningThread;
 
-        std::list<IClient*> clientsList;
-
+        std::list<ClientCommunicationHandler*> clientsList;
 
     public:
         //Constructor

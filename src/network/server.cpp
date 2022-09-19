@@ -1,11 +1,9 @@
 #include "server.h"
 #include <iostream>
 
-
-
     CamServer::CamServer(int port)
     {
-
+       
         int opt = 1;
 
         // Creating socket file descriptor
@@ -64,10 +62,18 @@
         
         int new_socket;
 
-        if ((new_socket = accept(this->socket_fd, (struct sockaddr*)&this->address, (socklen_t*)&addrlen)) < 0) 
+        while(true)
         {
-            perror("accept");
-            exit(EXIT_FAILURE);
+            if ((new_socket = accept(this->socket_fd, (struct sockaddr*)&this->address, (socklen_t*)&addrlen)) < 0) 
+            {
+                perror("accept");
+                exit(EXIT_FAILURE);
+            }
+            std::cout << "New Client\n";
+            ClientCommunicationHandler* cch = new ClientCommunicationHandler(new_socket);
+            
+            this->clientsList.push_back(cch);
+            cch->start();
         }
          std::cout << "Thread Stop!\n";
     }
@@ -76,7 +82,14 @@
     {
         // closing the listening socket
         
+        //Wait for listening thread Close
         this->listeningThread.join();
+
+        /*for (auto &i : this->clientsList) 
+        {
+            i.Thread.join();
+        }*/
+
         shutdown(this->socket_fd, SHUT_RDWR);
     }
 
