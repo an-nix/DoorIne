@@ -8,10 +8,8 @@
 
 #include <thread>
 #include <list>
-
 #include "client.h"
-
-
+#include "clientComHandler.h"
 
 class CamServer
 {
@@ -20,19 +18,19 @@ class CamServer
         int socket_fd;
         struct sockaddr_in address;
         std::thread listeningThread;
+
         std::list<ClientCommunicationHandler*> clientsList;
+        std::thread deletionThread;
 
         //Remove Closed Clients
-        void ClientGarbage();
+        void clientsDeletion();
 
     public:
         //Constructor
         CamServer(int);
         //Destructor
         ~CamServer();
-        // Test
-        void print();
-        
+                
         void open();
         void stop();
         void waitConnect();

@@ -4,11 +4,8 @@
 #include <iostream>
 #include <unistd.h>
 #include <thread>
-#include "client.h"
 #include <sys/socket.h>
 
-
-#define RCV_BUFFER 1024
 
 
 /***
@@ -91,24 +88,5 @@ class PythonClientCreator : public ClientCreator
 
 void ClientCode(const ClientCreator&);
 
-
-class ClientCommunicationHandler
-{
-  public:
-    std::thread clientThread;
-    int clientSocket;
-    AbstractClient* client;
-
-    bool running;
-    bool socketOpen;
-
-    char* buffer;
-
-    ClientCommunicationHandler(int socket);
-    void start();
-    void stop();
-    void run();
-    int clientInit();
-};
 
 #endif

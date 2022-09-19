@@ -23,6 +23,10 @@
         this->address.sin_family=AF_INET;     // TCP/IP
         this->address.sin_addr.s_addr=INADDR_ANY;     // server addr--permit all connection
         this->address.sin_port=htons(port);       // server port
+
+        
+        this->deletionThread = std::thread{&CamServer::clientsDeletion,this};
+        
     }
 
     CamServer::~CamServer()
@@ -31,10 +35,6 @@
     }
 
 
-    void CamServer::print()
-    {
-        std::cout << "Hello, From Class!\n";
-    }
 
     void CamServer::open()
     {
@@ -59,7 +59,6 @@
     {
          std::cout << "Thread Start!\n";
         int addrlen = sizeof(this->address);
-        
         int new_socket;
 
         while(true)
@@ -71,31 +70,42 @@
             }
             std::cout << "New Client\n";
             ClientCommunicationHandler* cch = new ClientCommunicationHandler(new_socket);
-            
+            std::cout << "Push to list!\n";
             this->clientsList.push_back(cch);
+            std::cout << "Start!\n";
             cch->start();
+            std::cout << "Started!\n";
         }
          std::cout << "Thread Stop!\n";
     }
 
-    void CamServer::ClientGarbage()
+    // Delete Closed ClientCommunicationHandler
+    void CamServer::clientsDeletion()
     {
-        std::list<ClientCommunicationHandler*>::iterator i = this->clientsList.begin();
-        while (i != this->clientsList.end())
+        std::cout << "Start Deletion Thread \n";
+        while(true)
         {
-            bool isActive = (*i)->socketOpen;
-            if (!isActive)
+            std::list<ClientCommunicationHandler*>::iterator i = this->clientsList.begin();
+            while (i != this->clientsList.end())
             {
-                (*i)->stop();
-                delete(*i);
-                this->clientsList.erase(i++);  // alternatively, i = items.erase(i);
+                bool isActive = (*i)->socketOpen;
+                if (!isActive)
+                {
+                    //call thread stop
+                    (*i)->stop();
+                    //dispose object
+                    delete(*i);
+                    //remove object from list
+                    this->clientsList.erase(i++);  // alternatively, i = items.erase(i);
+                    std::cout << "Client disposed \n";
+                }
+                else
+                {
+                    ++i;
+                }
             }
-            else
-            {
-                //other_code_involving(*i);
-                ++i;
-            }
-}
+            std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+        }
     }
 
     void CamServer::stop()
@@ -103,6 +113,7 @@
         // closing the listening socket
         //Wait for listening thread Close
         this->listeningThread.join();
+        this->deletionThread.join();
         /*for (auto &i : this->clientsList) 
         {
             i.Thread.join();

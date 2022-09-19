@@ -20,11 +20,10 @@ int main(int, char**) {
 
     CamServer* cs = new CamServer(1234);
     cs->open();
-    cs->print();
     while(true)
     {
         std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-        std::cout << "I'm waiting!\n";
+        //std::cout << "I'm waiting!\n";
     }
 
 }
