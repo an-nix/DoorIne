@@ -78,18 +78,35 @@
          std::cout << "Thread Stop!\n";
     }
 
+    void CamServer::ClientGarbage()
+    {
+        std::list<ClientCommunicationHandler*>::iterator i = this->clientsList.begin();
+        while (i != this->clientsList.end())
+        {
+            bool isActive = (*i)->socketOpen;
+            if (!isActive)
+            {
+                (*i)->stop();
+                delete(*i);
+                this->clientsList.erase(i++);  // alternatively, i = items.erase(i);
+            }
+            else
+            {
+                //other_code_involving(*i);
+                ++i;
+            }
+}
+    }
+
     void CamServer::stop()
     {
         // closing the listening socket
-        
         //Wait for listening thread Close
         this->listeningThread.join();
-
         /*for (auto &i : this->clientsList) 
         {
             i.Thread.join();
         }*/
-
         shutdown(this->socket_fd, SHUT_RDWR);
     }
 

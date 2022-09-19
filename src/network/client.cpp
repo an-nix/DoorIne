@@ -5,7 +5,6 @@ void ClientCode(const ClientCreator& creator) {
 
   std::cout << "Client: I'm not aware of the creator's class, but it still works.\n"
             << creator.SomeOperation() << std::endl;
-
 }
 
 AbstractClient* GenericClientCreator::FactoryMethod() const
@@ -59,7 +58,6 @@ ClientCommunicationHandler::ClientCommunicationHandler(int socket)
 
 void ClientCommunicationHandler::run()
 {
-
     // initiate communication
     int init = clientInit();
     //nominal communication
@@ -75,7 +73,6 @@ void ClientCommunicationHandler::run()
         }
     }
     std::cout << "Quit Communication Handler \n";
-
 }
 
 // Wait for initialisation message
@@ -96,15 +93,13 @@ int ClientCommunicationHandler::clientInit()
     switch(couplingType)
     {
         case CLIENT_TYPE::GENERIC:
-            
-        break;
+            break;
 
         case CLIENT_TYPE::PYTHON:
-        
-        break;
+            break;
 
         default:
-        break;
+            break;
     }
 
     int couplingVersion = (buffer[0] & 0x0F);
@@ -117,7 +112,6 @@ int ClientCommunicationHandler::clientInit()
 void ClientCommunicationHandler::start()
 {
     this->clientThread = std::thread{&ClientCommunicationHandler::run,this};
-    this->clientThread.join();
 }
 
 void ClientCommunicationHandler::stop()

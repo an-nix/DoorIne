@@ -20,8 +20,10 @@ class CamServer
         int socket_fd;
         struct sockaddr_in address;
         std::thread listeningThread;
-
         std::list<ClientCommunicationHandler*> clientsList;
+
+        //Remove Closed Clients
+        void ClientGarbage();
 
     public:
         //Constructor
