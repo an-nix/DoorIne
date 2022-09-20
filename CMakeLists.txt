@@ -22,7 +22,7 @@ add_subdirectory(${PROJECT_SOURCE_DIR}/src/lib/test)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/lib/live555)
 
 add_executable(DoorIn src/main.cpp src/network/client.cpp src/network/clientComHandler.cpp src/network/server.cpp)
-target_link_libraries(DoorIn Threads::Threads ${OpenCV_LIBS} ${CURL_LIBRARY} Test )
+target_link_libraries(DoorIn Threads::Threads ${OpenCV_LIBS} ${CURL_LIBRARY} Test live555)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
