@@ -1,0 +1,221 @@
+\hypertarget{class_client_communication_handler}{}\doxysection{Client\+Communication\+Handler Class Reference}
+\label{class_client_communication_handler}\index{ClientCommunicationHandler@{ClientCommunicationHandler}}
+
+
+Represent a client.  
+
+
+
+
+{\ttfamily \#include $<$client\+Com\+Handler.\+h$>$}
+
+
+
+Collaboration diagram for Client\+Communication\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{class_client_communication_handler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_client_communication_handler_adfb89b2274806008eeb42b083cd47fe0}{Client\+Communication\+Handler}} (int socket)
+\item 
+void \mbox{\hyperlink{class_client_communication_handler_a0376efb4bbe9bbc0a53a6dc08c343c1f}{start}} ()
+\item 
+void \mbox{\hyperlink{class_client_communication_handler_ab36957bbe84f044e7404d2899c06677c}{stop}} ()
+\item 
+void \mbox{\hyperlink{class_client_communication_handler_a2382ca047d05b7379d151dc3950dfa0d}{run}} ()
+\item 
+int \mbox{\hyperlink{class_client_communication_handler_af1d9d550a4b796796226904e8dd76b9a}{client\+Init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::thread \mbox{\hyperlink{class_client_communication_handler_adbf67d36d3a18120e80273dc0891e575}{client\+Thread}}
+\item 
+int \mbox{\hyperlink{class_client_communication_handler_aa46822f020155793353b999383b714c8}{client\+Socket}}
+\item 
+\mbox{\hyperlink{class_abstract_client}{Abstract\+Client}} $\ast$ \mbox{\hyperlink{class_client_communication_handler_a279c8934814dc54c7ebaba9683fb609d}{client}}
+\item 
+bool \mbox{\hyperlink{class_client_communication_handler_a2ebbb1b8d1008540a54ffc35deb9d011}{running}}
+\item 
+bool \mbox{\hyperlink{class_client_communication_handler_a7f1dfcf82d8d11638f4902d56e84280d}{socket\+Open}}
+\item 
+char $\ast$ \mbox{\hyperlink{class_client_communication_handler_acac622aad84f92a18a4560695617d572}{buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represent a client. 
+
+Definition at line 18 of file client\+Com\+Handler.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_client_communication_handler_adfb89b2274806008eeb42b083cd47fe0}\label{class_client_communication_handler_adfb89b2274806008eeb42b083cd47fe0}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{ClientCommunicationHandler()}{ClientCommunicationHandler()}}
+{\footnotesize\ttfamily Client\+Communication\+Handler\+::\+Client\+Communication\+Handler (\begin{DoxyParamCaption}\item[{int}]{socket }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file client\+Com\+Handler.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_client_communication_handler_af1d9d550a4b796796226904e8dd76b9a}\label{class_client_communication_handler_af1d9d550a4b796796226904e8dd76b9a}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!clientInit@{clientInit}}
+\index{clientInit@{clientInit}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{clientInit()}{clientInit()}}
+{\footnotesize\ttfamily int Client\+Communication\+Handler\+::client\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file client\+Com\+Handler.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_client_communication_handler_af1d9d550a4b796796226904e8dd76b9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_client_communication_handler_a2382ca047d05b7379d151dc3950dfa0d}\label{class_client_communication_handler_a2382ca047d05b7379d151dc3950dfa0d}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!run@{run}}
+\index{run@{run}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Client\+Communication\+Handler\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file client\+Com\+Handler.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_client_communication_handler_a2382ca047d05b7379d151dc3950dfa0d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_client_communication_handler_a2382ca047d05b7379d151dc3950dfa0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_client_communication_handler_a0376efb4bbe9bbc0a53a6dc08c343c1f}\label{class_client_communication_handler_a0376efb4bbe9bbc0a53a6dc08c343c1f}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!start@{start}}
+\index{start@{start}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Client\+Communication\+Handler\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file client\+Com\+Handler.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_client_communication_handler_a0376efb4bbe9bbc0a53a6dc08c343c1f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_client_communication_handler_a0376efb4bbe9bbc0a53a6dc08c343c1f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_client_communication_handler_ab36957bbe84f044e7404d2899c06677c}\label{class_client_communication_handler_ab36957bbe84f044e7404d2899c06677c}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!stop@{stop}}
+\index{stop@{stop}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Client\+Communication\+Handler\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 70 of file client\+Com\+Handler.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_client_communication_handler_acac622aad84f92a18a4560695617d572}\label{class_client_communication_handler_acac622aad84f92a18a4560695617d572}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!buffer@{buffer}}
+\index{buffer@{buffer}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char$\ast$ Client\+Communication\+Handler\+::buffer}
+
+Receive buffer 
+
+Definition at line 28 of file client\+Com\+Handler.\+h.
+
+\mbox{\Hypertarget{class_client_communication_handler_a279c8934814dc54c7ebaba9683fb609d}\label{class_client_communication_handler_a279c8934814dc54c7ebaba9683fb609d}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!client@{client}}
+\index{client@{client}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_abstract_client}{Abstract\+Client}}$\ast$ Client\+Communication\+Handler\+::client}
+
+
+
+Definition at line 23 of file client\+Com\+Handler.\+h.
+
+\mbox{\Hypertarget{class_client_communication_handler_aa46822f020155793353b999383b714c8}\label{class_client_communication_handler_aa46822f020155793353b999383b714c8}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!clientSocket@{clientSocket}}
+\index{clientSocket@{clientSocket}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{clientSocket}{clientSocket}}
+{\footnotesize\ttfamily int Client\+Communication\+Handler\+::client\+Socket}
+
+
+
+Definition at line 22 of file client\+Com\+Handler.\+h.
+
+\mbox{\Hypertarget{class_client_communication_handler_adbf67d36d3a18120e80273dc0891e575}\label{class_client_communication_handler_adbf67d36d3a18120e80273dc0891e575}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!clientThread@{clientThread}}
+\index{clientThread@{clientThread}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{clientThread}{clientThread}}
+{\footnotesize\ttfamily std\+::thread Client\+Communication\+Handler\+::client\+Thread}
+
+
+
+Definition at line 21 of file client\+Com\+Handler.\+h.
+
+\mbox{\Hypertarget{class_client_communication_handler_a2ebbb1b8d1008540a54ffc35deb9d011}\label{class_client_communication_handler_a2ebbb1b8d1008540a54ffc35deb9d011}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!running@{running}}
+\index{running@{running}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool Client\+Communication\+Handler\+::running}
+
+Is the thread running 
+
+Definition at line 25 of file client\+Com\+Handler.\+h.
+
+\mbox{\Hypertarget{class_client_communication_handler_a7f1dfcf82d8d11638f4902d56e84280d}\label{class_client_communication_handler_a7f1dfcf82d8d11638f4902d56e84280d}} 
+\index{ClientCommunicationHandler@{ClientCommunicationHandler}!socketOpen@{socketOpen}}
+\index{socketOpen@{socketOpen}!ClientCommunicationHandler@{ClientCommunicationHandler}}
+\doxysubsubsection{\texorpdfstring{socketOpen}{socketOpen}}
+{\footnotesize\ttfamily bool Client\+Communication\+Handler\+::socket\+Open}
+
+Is the socket open 
+
+Definition at line 26 of file client\+Com\+Handler.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/network/\mbox{\hyperlink{client_com_handler_8h}{client\+Com\+Handler.\+h}}\item 
+src/network/\mbox{\hyperlink{client_com_handler_8cpp}{client\+Com\+Handler.\+cpp}}\end{DoxyCompactItemize}

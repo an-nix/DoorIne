@@ -12,6 +12,9 @@
 
 #define RCV_BUFFER 1024
 
+
+
+/// @brief Represent a client 
 class ClientCommunicationHandler
 {
   public:

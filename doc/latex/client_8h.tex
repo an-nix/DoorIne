@@ -1,0 +1,106 @@
+\hypertarget{client_8h}{}\doxysection{src/network/client.h File Reference}
+\label{client_8h}\index{src/network/client.h@{src/network/client.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+Include dependency graph for client.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_abstract_client}{Abstract\+Client}}
+\item 
+class \mbox{\hyperlink{class_generic_client}{Generic\+Client}}
+\item 
+class \mbox{\hyperlink{class_python_client}{Python\+Client}}
+\item 
+class \mbox{\hyperlink{class_client_creator}{Client\+Creator}}
+\item 
+class \mbox{\hyperlink{class_generic_client_creator}{Generic\+Client\+Creator}}
+\item 
+class \mbox{\hyperlink{class_python_client_creator}{Python\+Client\+Creator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{client_8h_a74df6b3ff4b313b4120302c5526590db}{C\+L\+I\+E\+N\+T\+\_\+\+T\+Y\+PE}} \{ \mbox{\hyperlink{client_8h_a74df6b3ff4b313b4120302c5526590dba924464af7ccf0d3b602d3acecf626afd}{U\+N\+K\+W\+O\+WN}} = 0, 
+\mbox{\hyperlink{client_8h_a74df6b3ff4b313b4120302c5526590dba9e022e6380da28dd73210ed34b137c36}{G\+E\+N\+E\+R\+IC}} = 1, 
+\mbox{\hyperlink{client_8h_a74df6b3ff4b313b4120302c5526590dbaf082602680c1a8548d7cd4aa59c67b1c}{P\+Y\+T\+H\+ON}} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{client_8h_a5201f6aaab5c6d3bff9eadbd2d701025}{Client\+Code}} (const \mbox{\hyperlink{class_client_creator}{Client\+Creator}} \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{client_8h_a74df6b3ff4b313b4120302c5526590db}\label{client_8h_a74df6b3ff4b313b4120302c5526590db}} 
+\index{client.h@{client.h}!CLIENT\_TYPE@{CLIENT\_TYPE}}
+\index{CLIENT\_TYPE@{CLIENT\_TYPE}!client.h@{client.h}}
+\doxysubsubsection{\texorpdfstring{CLIENT\_TYPE}{CLIENT\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{client_8h_a74df6b3ff4b313b4120302c5526590db}{C\+L\+I\+E\+N\+T\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKWOWN@{UNKWOWN}!client.h@{client.h}}\index{client.h@{client.h}!UNKWOWN@{UNKWOWN}}}\mbox{\Hypertarget{client_8h_a74df6b3ff4b313b4120302c5526590dba924464af7ccf0d3b602d3acecf626afd}\label{client_8h_a74df6b3ff4b313b4120302c5526590dba924464af7ccf0d3b602d3acecf626afd}} 
+U\+N\+K\+W\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GENERIC@{GENERIC}!client.h@{client.h}}\index{client.h@{client.h}!GENERIC@{GENERIC}}}\mbox{\Hypertarget{client_8h_a74df6b3ff4b313b4120302c5526590dba9e022e6380da28dd73210ed34b137c36}\label{client_8h_a74df6b3ff4b313b4120302c5526590dba9e022e6380da28dd73210ed34b137c36}} 
+G\+E\+N\+E\+R\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PYTHON@{PYTHON}!client.h@{client.h}}\index{client.h@{client.h}!PYTHON@{PYTHON}}}\mbox{\Hypertarget{client_8h_a74df6b3ff4b313b4120302c5526590dbaf082602680c1a8548d7cd4aa59c67b1c}\label{client_8h_a74df6b3ff4b313b4120302c5526590dbaf082602680c1a8548d7cd4aa59c67b1c}} 
+P\+Y\+T\+H\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 15 of file client.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{client_8h_a5201f6aaab5c6d3bff9eadbd2d701025}\label{client_8h_a5201f6aaab5c6d3bff9eadbd2d701025}} 
+\index{client.h@{client.h}!ClientCode@{ClientCode}}
+\index{ClientCode@{ClientCode}!client.h@{client.h}}
+\doxysubsubsection{\texorpdfstring{ClientCode()}{ClientCode()}}
+{\footnotesize\ttfamily void Client\+Code (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_client_creator}{Client\+Creator}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file client.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8h_a5201f6aaab5c6d3bff9eadbd2d701025_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{client_8h_a5201f6aaab5c6d3bff9eadbd2d701025_icgraph}
+\end{center}
+\end{figure}

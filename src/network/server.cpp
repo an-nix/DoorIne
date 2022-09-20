@@ -1,6 +1,8 @@
 #include "server.h"
 #include <iostream>
 
+
+
     CamServer::CamServer(int port)
     {
        
@@ -24,7 +26,7 @@
         this->address.sin_addr.s_addr=INADDR_ANY;     // server addr--permit all connection
         this->address.sin_port=htons(port);       // server port
 
-        
+        // Start deletion Thread
         this->deletionThread = std::thread{&CamServer::clientsDeletion,this};
         
     }
@@ -36,6 +38,7 @@
 
 
 
+    
     void CamServer::open()
     {
 

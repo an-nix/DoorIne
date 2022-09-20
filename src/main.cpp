@@ -4,11 +4,17 @@
 #include <thread>
 
 #include <opencv2/opencv.hpp>
-
+#include <curl/curl.h>
 
 #include "network/client.h"
 
+#include "lib/test/math.h"
+#include "lib/live555/liveMedia/include/liveMedia.hh"
+//#include <liveMedia/liveMedia.h>
+
 int main(int, char**) {
+
+    engine::math::add(1,2);
 
     std::cout << "Server Start\n";
 
